@@ -46,7 +46,7 @@ public class CustomerProcessCommand {
 		}
 	}
 
-	@RequestMapping("/registration")
+	@RequestMapping("/showRegistrationForm")
 	public String registration(Model theModel) {
 
 		theModel.addAttribute("customer", new Customer());
@@ -54,4 +54,17 @@ public class CustomerProcessCommand {
 		return "registrationForm";
 	}
 
+	@RequestMapping("/registration")
+	public String registrationForm(@Valid @ModelAttribute("customer") Customer theCustomer, BindingResult theBindingResult) {
+
+		System.out.println("Last name: |" + theCustomer.getPassword() + "|");
+		
+		System.out.println("theBindingResult: " + theBindingResult);
+
+		if (theBindingResult.hasErrors()) {
+			return "registrationForm";
+		} else {
+			return "main-page";
+		}
+	}
 }

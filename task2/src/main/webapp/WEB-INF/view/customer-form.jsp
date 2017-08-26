@@ -44,10 +44,10 @@
 		Or you want registration?
 		<br>
 		<br>
-		<form:form action="registration" modelAttribute="customer">
+		<form:form action="showRegistrationForm" modelAttribute="customer">
 	
 		
-		<input type="submit" value="Submit" />
+		<input type="submit" value="Registration" />
 
 	</form:form>
 
