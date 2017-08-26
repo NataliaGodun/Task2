@@ -10,10 +10,11 @@
 	color: red
 }
 </style>
-</head>
-<body>
 
-	
+</head>
+
+<body>
+	<img src="${pageContext.request.contextPath}/resources/images/welcom.jpg"/>
 	<br>
 	<br>
 
