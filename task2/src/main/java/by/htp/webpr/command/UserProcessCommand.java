@@ -29,7 +29,7 @@ public class UserProcessCommand {
 
 		theModel.addAttribute("user", new User());
 
-		return "customer-form";
+		return "FirstUserForm";
 	}
 
 	@RequestMapping("/processUserForm")
@@ -40,7 +40,7 @@ public class UserProcessCommand {
 		System.out.println("theBindingResult: " + theBindingResult);
 
 		if (theBindingResult.hasErrors()) {
-			return "customer-form";
+			return "FirstUserForm";
 		} else {
 			return "main-page";
 		}
