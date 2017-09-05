@@ -17,7 +17,7 @@
 	</h1>
 	<br>
 	<br>
-	<form:form action="registration" modelAttribute="customer">
+	<form:form action="registration" modelAttribute="user">
 	
 		Login: <form:input path="login" />
 		<form:errors path="login" cssClass="error" />

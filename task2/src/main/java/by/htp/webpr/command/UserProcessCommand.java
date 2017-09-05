@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import by.htp.webpr.domain.Customer;
+import by.htp.webpr.domain.User;
 
 @Controller
-@RequestMapping("/customer")
-public class CustomerProcessCommand {
+@RequestMapping("/user")
+public class UserProcessCommand {
 
 	@InitBinder
 	public void initBinder(WebDataBinder dataBinder) {
@@ -24,16 +24,16 @@ public class CustomerProcessCommand {
 		dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
 	}
 
-	@RequestMapping("/showCustomerForm")
+	@RequestMapping("/showUserForm")
 	public String showForm(Model theModel) {
 
-		theModel.addAttribute("customer", new Customer());
+		theModel.addAttribute("user", new User());
 
 		return "customer-form";
 	}
 
-	@RequestMapping("/processCustomerForm")
-	public String processForm(@Valid @ModelAttribute("customer") Customer theCustomer, BindingResult theBindingResult) {
+	@RequestMapping("/processUserForm")
+	public String processForm(@Valid @ModelAttribute("user") User theCustomer, BindingResult theBindingResult) {
 
 		System.out.println("Last name: |" + theCustomer.getPassword() + "|");
 		
@@ -49,13 +49,13 @@ public class CustomerProcessCommand {
 	@RequestMapping("/showRegistrationForm")
 	public String registration(Model theModel) {
 
-		theModel.addAttribute("customer", new Customer());
+		theModel.addAttribute("user", new User());
 
 		return "registrationForm";
 	}
 
 	@RequestMapping("/registration")
-	public String registrationForm(@Valid @ModelAttribute("customer") Customer theCustomer, BindingResult theBindingResult) {
+	public String registrationForm(@Valid @ModelAttribute("user") User theCustomer, BindingResult theBindingResult) {
 
 		System.out.println("Last name: |" + theCustomer.getPassword() + "|");
 		

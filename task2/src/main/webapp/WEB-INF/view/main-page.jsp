@@ -11,7 +11,7 @@
 
 <body>
 
-The customer is confirmed: ${customer.login} 
+The user is confirmed: ${user.login} 
 
 <br><br>
 

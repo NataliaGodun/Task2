@@ -18,7 +18,7 @@
 	<br>
 	<br>
 
-	<form:form action="processCustomerForm" modelAttribute="customer">
+	<form:form action="processUserForm" modelAttribute="user">
 	
 		Login: <form:input path="login" />
         <form:errors path="login" cssClass="error" />
@@ -44,7 +44,7 @@
 		Or you want registration?
 		<br>
 		<br>
-		<form:form action="showRegistrationForm" modelAttribute="customer">
+		<form:form action="showRegistrationForm" modelAttribute="user">
 	
 		
 		<input type="submit" value="Registration" />
